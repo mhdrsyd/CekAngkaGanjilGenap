@@ -26,35 +26,35 @@ public class cekGanjilGenap extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
+        inputAngka = new javax.swing.JTextField();
+        judul = new javax.swing.JLabel();
         btncek = new javax.swing.JButton();
         btnkeluar = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        lblHasil = new javax.swing.JLabel();
+        labelHasil = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
-        jTextField1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jTextField1.addFocusListener(new java.awt.event.FocusAdapter() {
+        inputAngka.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        inputAngka.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
-                jTextField1FocusGained(evt);
+                inputAngkaFocusGained(evt);
             }
         });
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        inputAngka.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                inputAngkaActionPerformed(evt);
             }
         });
-        jTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
+        inputAngka.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextField1KeyTyped(evt);
+                inputAngkaKeyTyped(evt);
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jLabel1.setText("Cek Angka Ganjil / Genap");
+        judul.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        judul.setText("Cek Angka Ganjil / Genap");
 
         btncek.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btncek.setText("Cek Angka");
@@ -72,10 +72,10 @@ public class cekGanjilGenap extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        lblHasil.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel3.setText("Hasil  :");
+        labelHasil.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        labelHasil.setText("Hasil  :");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -83,16 +83,16 @@ public class cekGanjilGenap extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(inputAngka, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(119, 119, 119))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(82, 82, 82)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(labelHasil, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(jLabel1)
+                        .addComponent(lblHasil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(judul)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(21, 21, 21)
                         .addComponent(btncek, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -104,13 +104,13 @@ public class cekGanjilGenap extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(26, 26, 26)
-                .addComponent(jLabel1)
+                .addComponent(judul)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(inputAngka, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
+                    .addComponent(lblHasil, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelHasil))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnkeluar, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -132,14 +132,14 @@ public class cekGanjilGenap extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void inputAngkaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputAngkaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_inputAngkaActionPerformed
 
     private void btncekActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncekActionPerformed
         // TODO add your handling code here:
                 try {
-            int angka = Integer.parseInt(jTextField1.getText());
+            int angka = Integer.parseInt(inputAngka.getText());
             String hasil = "";
 
             // Cek ganjil/genap
@@ -156,7 +156,7 @@ public class cekGanjilGenap extends javax.swing.JFrame {
                 hasil += "";
             }
 
-            jLabel2.setText(hasil);
+            lblHasil.setText(hasil);
             
             javax.swing.JOptionPane.showMessageDialog(this, hasil, "Hasil Pengecekan", javax.swing.JOptionPane.INFORMATION_MESSAGE);
             
@@ -182,20 +182,32 @@ public class cekGanjilGenap extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_btnkeluarActionPerformed
 
-    private void jTextField1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyTyped
+    private void inputAngkaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_inputAngkaKeyTyped
         // TODO add your handling code here:
-        char c = evt.getKeyChar();
-        if (!Character.isDigit(c) && c != '-') {
-            evt.consume();
-        }
-        
-    }//GEN-LAST:event_jTextField1KeyTyped
+    char c = evt.getKeyChar();
+    String text = ((javax.swing.JTextField) evt.getSource()).getText();
 
-    private void jTextField1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField1FocusGained
+    // Hanya izinkan angka dan '-' di awal satu kali
+    if (Character.isDigit(c)) {
+        // angka boleh
+    } else if (c == '-') {
+        // '-' hanya boleh di awal dan hanya satu kali
+        if (text.length() > 0 || text.contains("-")) {
+            evt.consume(); // batalkan jika sudah ada '-' atau bukan di awal
+        }
+    } else if (Character.isISOControl(c)) {
+        // izinkan tombol kontrol seperti backspace, delete
+    } else {
+        evt.consume(); // selain itu, tolak
+    }
+
+    }//GEN-LAST:event_inputAngkaKeyTyped
+
+    private void inputAngkaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_inputAngkaFocusGained
         // TODO add your handling code here:
-        jTextField1.setText("");
-        jLabel2.setText("");
-    }//GEN-LAST:event_jTextField1FocusGained
+        inputAngka.setText("");
+        lblHasil.setText("");
+    }//GEN-LAST:event_inputAngkaFocusGained
 
     /**
      * @param args the command line arguments
@@ -235,10 +247,10 @@ public class cekGanjilGenap extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btncek;
     private javax.swing.JButton btnkeluar;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JTextField inputAngka;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel judul;
+    private javax.swing.JLabel labelHasil;
+    private javax.swing.JLabel lblHasil;
     // End of variables declaration//GEN-END:variables
 }
