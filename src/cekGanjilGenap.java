@@ -36,6 +36,8 @@ public class cekGanjilGenap extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
+        jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
         inputAngka.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         inputAngka.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
@@ -138,6 +140,14 @@ public class cekGanjilGenap extends javax.swing.JFrame {
 
     private void btncekActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncekActionPerformed
         // TODO add your handling code here:
+            String input = inputAngka.getText().trim();
+            if (input.isEmpty()) {
+                javax.swing.JOptionPane.showMessageDialog(this,
+                        "Mohon masukkan angka terlebih dahulu!",
+                        "Peringatan",
+                        javax.swing.JOptionPane.WARNING_MESSAGE);
+                return; // hentikan proses
+            }
                 try {
             int angka = Integer.parseInt(inputAngka.getText());
             String hasil = "";
