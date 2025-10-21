@@ -27,16 +27,16 @@ public class cekGanjilGenap extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         inputAngka = new javax.swing.JTextField();
-        judul = new javax.swing.JLabel();
         btncek = new javax.swing.JButton();
         btnkeluar = new javax.swing.JButton();
         lblHasil = new javax.swing.JLabel();
         labelHasil = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        judul = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
-
-        jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         inputAngka.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         inputAngka.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -55,9 +55,7 @@ public class cekGanjilGenap extends javax.swing.JFrame {
             }
         });
 
-        judul.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        judul.setText("Cek Angka Ganjil / Genap");
-
+        btncek.setBackground(new java.awt.Color(0, 0, 255));
         btncek.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btncek.setText("Cek Angka");
         btncek.addActionListener(new java.awt.event.ActionListener() {
@@ -66,6 +64,7 @@ public class cekGanjilGenap extends javax.swing.JFrame {
             }
         });
 
+        btnkeluar.setBackground(new java.awt.Color(204, 0, 0));
         btnkeluar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnkeluar.setText("Keluar");
         btnkeluar.addActionListener(new java.awt.event.ActionListener() {
@@ -83,52 +82,88 @@ public class cekGanjilGenap extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(inputAngka, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(119, 119, 119))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(82, 82, 82)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(inputAngka)
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(btncek, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnkeluar, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(labelHasil, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lblHasil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(judul)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addComponent(btncek, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(57, 57, 57)
-                        .addComponent(btnkeluar, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 78, Short.MAX_VALUE))
+                        .addComponent(lblHasil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(judul)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addContainerGap()
                 .addComponent(inputAngka, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblHasil, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(labelHasil))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnkeluar, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btncek, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(labelHasil)
+                        .addGap(20, 20, 20))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(lblHasil, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+                        .addGap(18, 18, 18)))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btncek, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnkeluar, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        jPanel2.setBackground(new java.awt.Color(0, 0, 204));
+        jPanel2.setForeground(new java.awt.Color(0, 51, 153));
+
+        judul.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        judul.setForeground(new java.awt.Color(255, 255, 255));
+        judul.setText("Cek Angka Ganjil / Genap");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(73, Short.MAX_VALUE)
+                .addComponent(judul)
+                .addGap(35, 35, 35))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(judul)
+                .addContainerGap(20, Short.MAX_VALUE))
+        );
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 18)); // NOI18N
+        jLabel1.setText("Masukkan Angka");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(120, 120, 120)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(32, 32, 32)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -258,7 +293,9 @@ public class cekGanjilGenap extends javax.swing.JFrame {
     private javax.swing.JButton btncek;
     private javax.swing.JButton btnkeluar;
     private javax.swing.JTextField inputAngka;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel judul;
     private javax.swing.JLabel labelHasil;
     private javax.swing.JLabel lblHasil;
